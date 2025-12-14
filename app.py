@@ -13,7 +13,7 @@ st.set_page_config(
 @st.cache_resource
 def load_model():
     with open('california_knn_pipeline.pkl', 'rb') as f:
-        model = pickle.load(f)
+        model = joblib.load('california_knn_pipeline.joblib')
     return model
 
 model = load_model()
